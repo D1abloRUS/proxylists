@@ -1,6 +1,7 @@
 FROM node:alpine
 
-ENV JOBS=100
+ENV JOBS=100 \
+    SITE=https://m.vk.com
 
 RUN apk --no-cache add --update \
       curl \
