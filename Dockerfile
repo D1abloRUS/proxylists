@@ -12,8 +12,8 @@ RUN apk --no-cache add --update \
     && npm rm -g npm \
     && rm -rf /root/..?* /root/.[!.]* /root/* /tmp/*
 
-COPY proxy_check.sh entrypoint.sh /usr/local/bin/
+COPY proxy_check.sh docker-entrypoint.sh /usr/local/bin/
 
 WORKDIR /opt
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
