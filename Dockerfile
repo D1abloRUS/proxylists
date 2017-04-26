@@ -1,7 +1,5 @@
 FROM node:alpine
 
-ENV JOBS=100
-
 COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN apk --no-cache add --update \
